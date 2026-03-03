@@ -1,0 +1,63 @@
+/*Google fontes*/
+
+
+/*Fontes utilizadas*/
+
+
+/*Reset CSS 
+= Padronizar os navegadores*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: transparent;
+}
+
+
+
+
+
+body{
+    background-color: #000000;
+    font-size: 16px;
+
+    
+}
+
+/*Cabeçalho*/
+header {
+    /* cor de fundo: background*/
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(51, 1, 75, 1) 38%);
+    color: #ebebeb;
+    display: flex;
+    justify-content: space-between; 
+    /*tamanho do cabeçalho*/
+    width: 100%; /*largura*/
+
+}
+
+.menu-desktop {
+    display: none;
+}
+
+h1 {
+    font-size: 32px; /*tam fonte*/
+    text-align: center; /*centralizar*/
+    color: #ebebeb; /*cor texto*/
+}
+
+h2 {
+    font-size: 16px;
+    text-align: center;
+    color: #ebebeb;
+}
+
+/* Responsivo */
+@media (min-width:768px) {
+    .menu-desktop {
+        display: flex;
+    }
+}
