@@ -41,6 +41,15 @@ header {
 
 .menu-desktop {
     display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/*menu = UL*/
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 17px;
 }
 
 h1 {
@@ -56,8 +65,19 @@ h2 {
 }
 
 /* Responsivo */
+
+/* A partir de Telas Grandes */
 @media (min-width:768px) {
+
+    header {
+        padding: 2rem 9rem
+    }
+
     .menu-desktop {
         display: flex;
+        justify-content: end;
+        align-items: center;
+        margin: auto;
+
     }
 }
