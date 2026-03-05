@@ -1,7 +1,28 @@
 /*Google fontes*/
 
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variaveis de fonte*/
+:root {
+--fonte-menu: "Montserrat", sans-serif;
+--fonte-titulo: "Funnel Sans", sans-serif;
+--fonte-subtitulo: "Noto Serif", serif;
+
+}
+
+/* Variaveis de Cores*/
+:root {
+    --cor-destaque: #000000;
+    --cor-padrao: #ebebeb;
+}
 
 /*Fontes utilizadas*/
+
+/* converter REM em PX*/
+
+html {
+    font-size: 62.5%;
+}
 
 
 /*Reset CSS 
@@ -36,13 +57,15 @@ header {
     justify-content: space-between; 
     /*tamanho do cabeçalho*/
     width: 100%; /*largura*/
+    align-items: center;
 
 }
 
 .menu-desktop {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 /*menu = UL*/
@@ -50,7 +73,25 @@ header {
     display: flex;
     list-style: none;
     gap: 17px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: var(--fonte-menu);
+    text-decoration: none;
 }
+
+
+.menu-texto {
+    color: var(--cor-padrao)
+    text-transform: capitalize;
+    font-size: 2rem;
+
+}
+
+.menu-link {
+    text-decoration: none;
+}
+
 
 h1 {
     font-size: 32px; /*tam fonte*/
@@ -80,4 +121,10 @@ h2 {
         margin: auto;
 
     }
+}
+
+/* Herança */
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-texto {
+    color: var(--cor-destaque);
 }
