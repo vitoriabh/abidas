@@ -116,6 +116,19 @@ h2 {
     width: 30rem; /*largura e comprimento*/
 }
 
+/* Herança */
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-texto {
+    color: var(--cor-destaque);
+}
+
+/* Hero = home */
+
+h1{
+    color: var(--cor-padrao); /* cor texto */
+    font-size: 2.2pem;
+}
+
 /* Responsivo */
 
 /* A partir de Telas Grandes */
@@ -134,8 +147,3 @@ h2 {
     }
 }
 
-/* Herança */
-.menu-link.active .menu-texto,
-.menu-link:hover .menu-texto {
-    color: var(--cor-destaque);
-}
