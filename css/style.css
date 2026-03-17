@@ -60,8 +60,6 @@ html[data-theme='dark'] .logo {
 }
 
 
-
-} 
 /*Fontes utilizadas*/
 
 /* converter REM em PX*/
@@ -227,7 +225,52 @@ h1{
     height: 100%;
     object-fit: cover;
     object-position: center;
+    /*bloquear açções com o botao direito*/
     pointer-events: none;
+
+}
+
+/*Filtro ou Overlay escuro cutil acima dos slides*/
+
+/*Pseudo Elemento*/
+.carousel .carousel-item::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.562);
+    position: absolute;
+    inset: 0;
+
+
+}
+
+.carousel.carousel-caption {
+    position: absolute;
+    inset: 150px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(128, 56, 56);
+    justify-content: center;
+    align-items: center;
+    gap: ;
+}
+
+.carousel h5 {
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.carousel p {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.carousel h5,
+.carousel p {
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.725);
+}
+
+.video iframe {
+    aspect-ratio: 4/4;
+    width: 70vw;
 }
 
 
