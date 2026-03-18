@@ -34,6 +34,9 @@
 
     --cor-icones: #686767;
     --destaque-icones: #892fb3;
+
+        --cor-borda: #353535;
+
 }
 
 /* Tema Claro */
@@ -52,6 +55,9 @@
 
     --cor-icones: #686767;
     --destaque-icones: #000;
+
+    --cor-borda: #a5a5a5;
+
 
 }
 /* Filtro Cor do Logo */
@@ -85,7 +91,7 @@ html {
 
 /* TODA ESTRUTURA DO SITE ou HTML */
 body{
-    background-color: var(--cor-fundo)
+    background-color: var(--cor-fundo);
     font-size: 16px;
 
     
@@ -100,6 +106,10 @@ header {
     /*tamanho do cabeçalho*/
     width: 100%; /*largura*/
     align-items: center;
+    position: fixed;
+    z-index: 200;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var();
     
 
 }
@@ -242,15 +252,15 @@ h1{
 
 }
 
-.carousel.carousel-caption {
+.carousel .carousel-caption {
     position: absolute;
     inset: 150px;
     display: flex;
     flex-direction: column;
-    background: rgb(128, 56, 56);
+    background: rgba(128, 56, 56, 0);
     justify-content: center;
     align-items: center;
-    gap: ;
+
 }
 
 .carousel h5 {
@@ -288,27 +298,103 @@ h1{
     text-transform: none;
     letter-spacing: ;
     font-weight: 100;
-    font-family: var(--fonte-padrao);
+    font-family: var(--cor-borda)
+}
 
+/*Seção Geral*/
+/*Vamos ir atualizando essa parte*/
 
+#home {
+    padding: 4rem 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    /* empurra o video */
+    margin-bottom: 5rem;
 }
 
 
+
 /* Responsivo */
+
+/* largura até: */
+@media (max-width: 768px) {
+    .carousel .carousel-inner {
+        margin-top: 2rem;
+    }
+
+    #home {
+        padding-top: 6rem;
+    }
+}
 
 /* A partir de Telas Grandes */
 @media (min-width:768px) {
 
     header {
-        padding: 2rem 9rem
+        padding: 1rem 10rem;
+        justify-content: flex-start;
+        gap: 2rem;
     }
 
     .menu-desktop {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         margin: auto;
 
     }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .carousel .carousel-inner {
+        margin-top: -4.2rem;
+        padding-top: 7rem;
+    }
+
+    /* voltar aqui*/
+    #home {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    h1 {
+        font-size: 5rem;
+
+    }
 }
 
+/* Telas Maiores que 1400px */
+@media (min-widht: 1400px) {
+    h1 {
+        font-size: 6.5rem
+        
+    }
+
+    /* Voltar aqui*/
+    .complemento {
+        padding: 5rem 7rem 4rem;
+        margin-top: -7rem;
+
+    }
+    .complemento h2 {
+        font-size: 2rem;
+        text-transform: none;
+        letter-spacing: normal;
+        font-weight: 500;
+        font-family: var(--fonte-menu);
+        color: var(--cor-titulo);
+    }
+}
